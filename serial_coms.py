@@ -110,8 +110,8 @@ class serialLine:
         
 if __name__ == "__main__":
     # Tests serial by bouncing a random number through the arduino
-    serialTestLine = serialLine(57600)
-
-    serialTestLine.testLine('z')
+    microController = serialLine(38400) # Sets up serial communication line to STM32 (9600 baud)
+    microController.sendDataBytes(100, 100, 300, 100, 100, 100)
+    microController.testLine('z')
     
 
